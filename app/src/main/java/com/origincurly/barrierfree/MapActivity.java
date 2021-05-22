@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends BasicActivity {
+import androidx.constraintlayout.widget.Placeholder;
+
+public class MapActivity extends BasicActivity {
 
 
     private TextView talkOutput_Txt;
@@ -49,7 +51,6 @@ public class MainActivity extends BasicActivity {
         }
     }
 
-
     @Override
     public void sstResult(String msg) {
         talkOutput_Txt.setText(talkOutput_Txt.getText()+"\r\n"+msg);
@@ -62,5 +63,11 @@ public class MainActivity extends BasicActivity {
         }
 
         return true;
+    }
+
+    @Override
+    public void clearFocusBundle() {
+        super.clearCarPreferences();
+        speechInput_EditTxt.clearFocus();
     }
 }
