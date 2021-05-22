@@ -35,6 +35,7 @@ import static android.speech.tts.TextToSpeech.ERROR;
 
 public class BasicActivity extends AppCompatActivity implements GlobalValue {
 
+    //curly
     //region Activity
 
     public Context mContext;
