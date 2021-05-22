@@ -12,4 +12,7 @@
     <string name="app_exit">종료</string>
 
 
+    <!--map-->
+    <string name="map_input_hint">어디가?</string>
+
 </resources>

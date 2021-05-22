@@ -11,4 +11,7 @@
 
     <string name="app_exit">App Exit</string>
 
+
+    <!--map-->
+    <string name="map_input_hint">Where to?</string>
 </resources>
