@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">BarrierFree</string>
 
+    <string name='app_back'>뒤로가기</string>기
 
     <!--message-->
     <string name="msg_app_exit">\'뒤로\'버튼을 한번 더 누르시면 종료됩니다.</string>
@@ -14,5 +15,7 @@
 
     <!--map-->
     <string name="map_input_hint">어디가?</string>
+
+
 
 </resources>

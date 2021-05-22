@@ -25,13 +25,13 @@
     <color name="basic_bright">#FFFFFF</color>
 
     <color name="basic_800">#333D4B</color>
-    <color name="basic_700">#FFFFFF</color>
+    <color name="basic_700">#4E5968</color>
     <color name="basic_600">#FFFFFF</color>
     <color name="basic_500">#FFFFFF</color>
     <color name="basic_400">#FFFFFF</color>
     <color name="basic_300">#FFFFFF</color>
-    <color name="basic_200">#FFFFFF</color>
-    <color name="basic_100">#FFFFFF</color>
+    <color name="basic_200">#E5E8EB</color>
+    <color name="basic_100">#F2F4F6</color>
     <color name="basic_50">#FFFFFF</color>
 
 
