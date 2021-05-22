@@ -67,7 +67,7 @@ public class MapActivity extends BasicActivity {
 
     @Override
     public void clearFocusBundle() {
-        super.clearCarPreferences();
+        super.clearFocusBundle();
         speechInput_EditTxt.clearFocus();
     }
 }

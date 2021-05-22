@@ -35,24 +35,31 @@ public class IntroActivity extends BasicActivity {
 
     //region Version
 
-    //endregion
+
+
+
 
     private void checkPermission() {
-        boolean isAllGranted;
         String[] permissions = {
                 Manifest.permission.VIBRATE,
                 Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.RECORD_AUDIO,
         };
-        ArrayList<String> requests = new ArrayList<>();
+        ArrayList<String> denieds = new ArrayList<>();
 
         for (int i=0; i<permissions.length; i++) {
-            if (ContextCompat.checkSelfPermission(mContext, permissions[i]) != PackageManager.PERMISSION_GRANTED){
-                requests.add(permissions[i]);
+            if (ContextCompat.checkSelfPermission(mContext, permissions[i]) != PackageManager.PERMISSION_GRANTED) {
+                denieds.add(permissions[i]);
             }
         }
 
-        if (requests.size() > 0) {
+        if (denieds.size() > 0) {
+            String[] requests = new String[denieds.size()];
+
+            for (int i=0; i<denieds.size(); i++) {
+                requests[i] = denieds.get(i);
+            }
+            ActivityCompat.requestPermissions(mActivity, requests, PERMISSION_REQUEST);
 
         } else {
             introMapHandler.sendEmptyMessageDelayed(0, INTRO_DELAY_TIME);
@@ -71,14 +78,14 @@ public class IntroActivity extends BasicActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if(requestCode==200 && grantResults.length>0){
-            if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
-
-            }
-            if(grantResults[1] == PackageManager.PERMISSION_GRANTED){
-
+        for (int i=0; i<grantResults.length; i++) {
+            if (grantResults[i] == PackageManager.PERMISSION_DENIED) {
+                showToastMessage(R.string.msg_permission_need);
+                startActivityClass(IntroActivity.class);
+                return;
             }
         }
+        startActivityClass(MapActivity.class, R.anim.animation_fade_in, R.anim.animation_stop_short);
     }
 
     @Override
