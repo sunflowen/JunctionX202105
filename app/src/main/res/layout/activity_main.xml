@@ -15,8 +15,8 @@
             android:text="TALK"
             android:textSize="15dp"
             android:textStyle="bold"
-            android:textColor="#ffffff"
-            android:background="#6B66FF"
+            android:textColor="@color/basic_btn_txt"
+            android:background="@color/btn_1_back"
             android:onClick="TalkClicked"/>
 
         <ScrollView
@@ -54,7 +54,7 @@
             android:textSize="15dp"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:background="#F15F5F"
+            android:background="@color/btn_2_back"
             android:onClick="SpeechClicked"/>
 
     </LinearLayout>

@@ -7,4 +7,10 @@
 
     <color name="intro_status_bar_color">#4374D9</color>
     <color name="status_bar_color">#4374D9</color>
+
+
+
+    <color name="basic_btn_txt">#ffffff</color>
+    <color name="btn_1_back">#6B66FF</color>
+    <color name="btn_2_back">#F15F5F</color>
 </resources>
