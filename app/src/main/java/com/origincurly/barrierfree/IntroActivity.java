@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -16,6 +18,9 @@ import java.util.Locale;
 
 
 public class IntroActivity extends BasicActivity {
+
+
+    private LinearLayout denied_Layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +35,20 @@ public class IntroActivity extends BasicActivity {
         userLang = Locale.getDefault().getLanguage();
         setDevicePreferences("userLang", userLang);
 
+        denied_Layout = findViewById(R.id.denied_Layout);
+
         checkPermission();
     }
 
+    public void PermissionClicked(View v) {
+        checkPermission();
+    }
+
+    public void ExitClicked(View v) {
+        killApp();
+    }
+
     //region Version
-
-
-
-
 
     private void checkPermission() {
         String[] permissions = {
@@ -78,14 +89,19 @@ public class IntroActivity extends BasicActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
+        boolean isGranted = true;
         for (int i=0; i<grantResults.length; i++) {
             if (grantResults[i] == PackageManager.PERMISSION_DENIED) {
-                showToastMessage(R.string.msg_permission_need);
-                startActivityClass(IntroActivity.class);
-                return;
+                isGranted = false;
             }
         }
-        startActivityClass(MapActivity.class, R.anim.animation_fade_in, R.anim.animation_stop_short);
+
+        if (isGranted) {
+            startActivityClass(MapActivity.class);
+        } else {
+            denied_Layout.setVisibility(View.VISIBLE);
+            showToastMessage(R.string.msg_permission_need);
+        }
     }
 
     @Override

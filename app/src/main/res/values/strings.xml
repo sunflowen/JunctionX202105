@@ -7,5 +7,8 @@
     <string name="msg_server_error">Bad connection to the server.</string>
     <string name="msg_permission_need">You must grant all permissions before you can use the service.</string>
 
+    <string name="permission_re">Permission Regrant</string>
+
+    <string name="app_exit">App Exit</string>
 
 </resources>
