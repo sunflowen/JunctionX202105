@@ -7,4 +7,34 @@
 
     <color name="intro_status_bar_color">#4374D9</color>
     <color name="status_bar_color">#4374D9</color>
+
+
+
+    <color name="basic_btn_txt">#ffffff</color>
+    <color name="btn_1_back">#6B66FF</color>
+    <color name="btn_2_back">#F15F5F</color>
+
+
+    <color name="intro_btn_back">#6B66FF</color>
+    <color name="intro_btn_txt">#ffffff</color>
+
+
+    <color name="basic_back">#191F28</color>
+    <color name="basic_accent">#FFEB3B</color>
+    <color name="basic_dark">#000000</color>
+    <color name="basic_bright">#FFFFFF</color>
+
+    <color name="basic_800">#333D4B</color>
+    <color name="basic_700">#FFFFFF</color>
+    <color name="basic_600">#FFFFFF</color>
+    <color name="basic_500">#FFFFFF</color>
+    <color name="basic_400">#FFFFFF</color>
+    <color name="basic_300">#FFFFFF</color>
+    <color name="basic_200">#FFFFFF</color>
+    <color name="basic_100">#FFFFFF</color>
+    <color name="basic_50">#FFFFFF</color>
+
+
+    <color name="transparent">#00000000</color>
+
 </resources>

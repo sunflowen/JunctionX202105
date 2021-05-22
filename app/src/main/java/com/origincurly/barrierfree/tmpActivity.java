@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends BasicActivity {
+public class tmpActivity extends BasicActivity {
 
 
     private TextView talkOutput_Txt;
@@ -15,7 +15,7 @@ public class MainActivity extends BasicActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_map);
         setActivity(this, this);
 
         talkOutput_Txt = findViewById(R.id.talkOutput_Txt);
@@ -49,7 +49,6 @@ public class MainActivity extends BasicActivity {
         }
     }
 
-
     @Override
     public void sstResult(String msg) {
         talkOutput_Txt.setText(talkOutput_Txt.getText()+"\r\n"+msg);
@@ -62,5 +61,11 @@ public class MainActivity extends BasicActivity {
         }
 
         return true;
+    }
+
+    @Override
+    public void clearFocusBundle() {
+        super.clearFocusBundle();
+        speechInput_EditTxt.clearFocus();
     }
 }

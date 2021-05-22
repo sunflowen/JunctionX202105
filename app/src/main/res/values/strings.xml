@@ -2,13 +2,16 @@
     <string name="app_name">BarrierFree</string>
 
 
+    <!--message-->\' .
+    <string name="msg_app_exit">Click the \'back\'button once more to finish.</string>
+    <string name="msg_server_error">Bad connection to the server.</string>
+    <string name="msg_permission_need">You must grant all permissions before you can use the service.</string>
 
-    <!--footer-->
-    <string name="footer_drive">운전</string>
-    <string name="footer_history">운행 기록</string>
-    <string name="footer_setting">설정</string>
+    <string name="permission_re">Permission Regrant</string>
 
-    <!--message-->
-    <string name="msg_app_exit">\'뒤로\'버튼을 한번 더 누르시면 종료됩니다.</string>
-    <string name="msg_server_error">서버와의 연결이 좋지 않습니다.</string>
+    <string name="app_exit">App Exit</string>
+
+
+    <!--map-->
+    <string name="map_input_hint">Where to?</string>
 </resources>
