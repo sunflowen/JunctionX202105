@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -16,6 +18,9 @@ import java.util.Locale;
 
 
 public class IntroActivity extends BasicActivity {
+
+
+    private LinearLayout denied_Layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,29 +35,42 @@ public class IntroActivity extends BasicActivity {
         userLang = Locale.getDefault().getLanguage();
         setDevicePreferences("userLang", userLang);
 
+        denied_Layout = findViewById(R.id.denied_Layout);
+
         checkPermission();
+    }
+
+    public void PermissionClicked(View v) {
+        checkPermission();
+    }
+
+    public void ExitClicked(View v) {
+        killApp();
     }
 
     //region Version
 
-    //endregion
-
     private void checkPermission() {
-        boolean isAllGranted;
         String[] permissions = {
                 Manifest.permission.VIBRATE,
                 Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.RECORD_AUDIO,
         };
-        ArrayList<String> requests = new ArrayList<>();
+        ArrayList<String> denieds = new ArrayList<>();
 
         for (int i=0; i<permissions.length; i++) {
-            if (ContextCompat.checkSelfPermission(mContext, permissions[i]) != PackageManager.PERMISSION_GRANTED){
-                requests.add(permissions[i]);
+            if (ContextCompat.checkSelfPermission(mContext, permissions[i]) != PackageManager.PERMISSION_GRANTED) {
+                denieds.add(permissions[i]);
             }
         }
 
-        if (requests.size() > 0) {
+        if (denieds.size() > 0) {
+            String[] requests = new String[denieds.size()];
+
+            for (int i=0; i<denieds.size(); i++) {
+                requests[i] = denieds.get(i);
+            }
+            ActivityCompat.requestPermissions(mActivity, requests, PERMISSION_REQUEST);
 
         } else {
             introMapHandler.sendEmptyMessageDelayed(0, INTRO_DELAY_TIME);
@@ -71,13 +89,18 @@ public class IntroActivity extends BasicActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if(requestCode==200 && grantResults.length>0){
-            if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
-
+        boolean isGranted = true;
+        for (int i=0; i<grantResults.length; i++) {
+            if (grantResults[i] == PackageManager.PERMISSION_DENIED) {
+                isGranted = false;
             }
-            if(grantResults[1] == PackageManager.PERMISSION_GRANTED){
+        }
 
-            }
+        if (isGranted) {
+            startActivityClass(MapActivity.class);
+        } else {
+            denied_Layout.setVisibility(View.VISIBLE);
+            showToastMessage(R.string.msg_permission_need);
         }
     }
 

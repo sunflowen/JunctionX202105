@@ -95,60 +95,20 @@ public class BasicActivity extends AppCompatActivity implements GlobalValue {
 
     //endregion
 
-    //region CarInfo
-
-    public void setCarDataLogin(String _carId, String _carUUIDCode, String _carRegisterCode) {
-        loginState = LOGIN_STATE_SUCCESS;
-        carId = _carId;
-        carUUIDCode = _carUUIDCode;
-        carRegisterCode = _carRegisterCode;
-
-        setDevicePreferences(DEVICE_PREF_KEY_PUSH_STATUS, 1);
-        setUserPreferences(USER_PREF_KEY_LOGIN_STATE, loginState);
-        setUserPreferences(USER_PREF_KEY_CAR_ID, carId);
-        setUserPreferences(USER_PREF_KEY_CAR_UUID, carUUIDCode);
-        setUserPreferences(USER_PREF_KEY_CAR_REGISTER_CODE, carRegisterCode);
-    }
-
-    public void setCarDataLogout() {
-        setDevicePreferences(DEVICE_PREF_KEY_PUSH_STATUS, 0);
-        NetworkManager.getInstance(mContext).clearSession();
-        CookieManager cookieManager = CookieManager.getInstance();
-        cookieManager.removeAllCookies(null);
-        cookieManager.flush();
-        clearUserPreferences();
-    }
-
-    public void getCarrData() {
-        defaultDate = new Date(0);
-        loginState = getUserPreferences(USER_PREF_KEY_LOGIN_STATE, LOGIN_STATE_NULL);
-        carId = getUserPreferences(USER_PREF_KEY_CAR_ID, USER_PREF_DEFAULT_CAR_ID);
-        carUUIDCode = getUserPreferences(USER_PREF_KEY_CAR_UUID, "");
-        carRegisterCode = getUserPreferences(USER_PREF_KEY_CAR_REGISTER_CODE, "");
-    }
-
-    //endregion
-
     //region UserInfo
 
     public int loginState;
     public String version, userLang, userToken;
-//en,kr / push token
-    public String carId, carUUIDCode, carRegisterCode;
-    public Date defaultDate;
+    public String userId;
 
-    public void setDataLogin(String _carId, String _carUUIDCode, String _carRegisterCode) {
+    public void setDataLogin(String _userId) {
         loginState = LOGIN_STATE_SUCCESS;
-        carId = _carId;
-        carUUIDCode = _carUUIDCode;
-        carRegisterCode = _carRegisterCode;
+        userId = _userId;
 
         setDevicePreferences(DEVICE_PREF_KEY_PUSH_STATUS, 1);
 
         setUserPreferences(USER_PREF_KEY_LOGIN_STATE, loginState);
-        setUserPreferences(USER_PREF_KEY_CAR_ID, carId);
-        setUserPreferences(USER_PREF_KEY_CAR_UUID, carUUIDCode);
-        setUserPreferences(USER_PREF_KEY_CAR_REGISTER_CODE, carRegisterCode);
+        setUserPreferences(USER_PREF_KEY_USER_ID, userId);
     }
 
     public void setDataLogout() {
@@ -161,75 +121,9 @@ public class BasicActivity extends AppCompatActivity implements GlobalValue {
     }
 
     public void getUserData() {
-        defaultDate = new Date(0);
         loginState = getUserPreferences(USER_PREF_KEY_LOGIN_STATE, LOGIN_STATE_NULL);
-        carId = getUserPreferences(USER_PREF_KEY_CAR_ID, USER_PREF_DEFAULT_CAR_ID);
-        carUUIDCode = getUserPreferences(USER_PREF_KEY_CAR_UUID, USER_PREF_DEFAULT_CAR_UUID);
-        carRegisterCode = getUserPreferences(USER_PREF_KEY_CAR_REGISTER_CODE, USER_PREF_DEFAULT_CAR_REGISTER_CODE);
+        userId = getUserPreferences(USER_PREF_KEY_USER_ID, USER_PREF_DEFAULT_USER_ID);
     }
-
-    //endregion
-//
-//    //region Footer
-//
-//    public int nowPage;
-//    public TextView drive_Txt, history_Txt, setting_Txt;
-//    public ImageView drive_Img, history_Img, setting_Img;
-//
-//    public void initFooterLayout() {
-//        drive_Txt = findViewById(R.id.drive_Txt);
-//        history_Txt = findViewById(R.id.history_Txt);
-//        setting_Txt = findViewById(R.id.setting_Txt);
-//        drive_Img = findViewById(R.id.drive_Img);
-//        history_Img = findViewById(R.id.history_Img);
-//        setting_Img = findViewById(R.id.setting_Img);
-//    }
-//
-//    public void setFooterLayout() {
-//        drive_Txt.setTextColor(ContextCompat.getColor(mContext, R.color.footer_off_txt));
-//        history_Txt.setTextColor(ContextCompat.getColor(mContext, R.color.footer_off_txt));
-//        setting_Txt.setTextColor(ContextCompat.getColor(mContext, R.color.footer_off_txt));
-//        drive_Img.setImageResource(R.drawable.ic_car_off);
-//        history_Img.setImageResource(R.drawable.ic_history_off);
-//        setting_Img.setImageResource(R.drawable.ic_setting_off);
-//
-//        switch (nowPage) {
-//            case DRIVE_PAGE:
-//                drive_Txt.setTextColor(ContextCompat.getColor(mContext, R.color.footer_on_txt));
-//                drive_Img.setImageResource(R.drawable.ic_car_on);
-//                break;
-//            case HISTORY_PAGE:
-//                history_Txt.setTextColor(ContextCompat.getColor(mContext, R.color.footer_on_txt));
-//                history_Img.setImageResource(R.drawable.ic_history_on);
-//                break;
-//            case SETTING_PAGE:
-//                setting_Txt.setTextColor(ContextCompat.getColor(mContext, R.color.footer_on_txt));
-//                setting_Img.setImageResource(R.drawable.ic_setting_on);
-//                break;
-//        }
-//    }
-//
-//    public void DriveClicked(View v) {
-//        if (nowPage != DRIVE_PAGE) {
-//            startActivityClass(DriveActivity.class, R.anim.animation_fade_in, R.anim.animation_stop_short);
-//        }
-//    }
-//
-//
-//    public void HistoryClicked(View v) {
-//        if (nowPage != HISTORY_PAGE) {
-//            startActivityClass(HistoryActivity.class, R.anim.animation_fade_in, R.anim.animation_stop_short);
-//        }
-//    }
-//
-//
-//    public void SettingClicked(View v) {
-//        if (nowPage != SETTING_PAGE) {
-//            startActivityClass(SettingActivity.class, R.anim.animation_fade_in, R.anim.animation_stop_short);
-//        }
-//    }
-
-    //endregion
 
     //region TTS
 
@@ -486,53 +380,6 @@ public class BasicActivity extends AppCompatActivity implements GlobalValue {
     }
     public void clearUserPreferences() {
         SharedPreferences pref = getSharedPreferences(USER_PREF_NAME, Activity.MODE_PRIVATE);
-        SharedPreferences.Editor editor = pref.edit();
-        editor.clear();
-        editor.apply();
-    }
-
-    public Boolean getCarPreferences(String key, boolean fault) {
-        SharedPreferences pref = getSharedPreferences(CAR_PREF_NAME, Activity.MODE_PRIVATE);
-        return pref.getBoolean(key, fault);
-    }
-    public int getCarPreferences(String key, int fault) {
-        SharedPreferences pref = getSharedPreferences(CAR_PREF_NAME, Activity.MODE_PRIVATE);
-        return pref.getInt(key, fault);
-    }
-    public Float getCarPreferences(String key, float fault) {
-        SharedPreferences pref = getSharedPreferences(CAR_PREF_NAME, Activity.MODE_PRIVATE);
-        return pref.getFloat(key, fault);
-    }
-    public String getCarPreferences(String key, String fault) {
-        SharedPreferences pref = getSharedPreferences(CAR_PREF_NAME, Activity.MODE_PRIVATE);
-        return pref.getString(key, fault);
-    }
-    public void setCarPreferences(String key, boolean value) {
-        SharedPreferences pref = getSharedPreferences(CAR_PREF_NAME, Activity.MODE_PRIVATE);
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putBoolean(key, value);
-        editor.apply();
-    }
-    public void setCarPreferences(String key, int value) {
-        SharedPreferences pref = getSharedPreferences(CAR_PREF_NAME, Activity.MODE_PRIVATE);
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putInt(key, value);
-        editor.apply();
-    }
-    public void setCarPreferences(String key, float value) {
-        SharedPreferences pref = getSharedPreferences(CAR_PREF_NAME, Activity.MODE_PRIVATE);
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putFloat(key, value);
-        editor.apply();
-    }
-    public void setCarPreferences(String key, String value) {
-        SharedPreferences pref = getSharedPreferences(CAR_PREF_NAME, Activity.MODE_PRIVATE);
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putString(key, value);
-        editor.apply();
-    }
-    public void clearCarPreferences() {
-        SharedPreferences pref = getSharedPreferences(CAR_PREF_NAME, Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
         editor.clear();
         editor.apply();

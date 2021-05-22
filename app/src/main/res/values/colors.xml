@@ -13,4 +13,8 @@
     <color name="basic_btn_txt">#ffffff</color>
     <color name="btn_1_back">#6B66FF</color>
     <color name="btn_2_back">#F15F5F</color>
+
+
+    <color name="intro_btn_back">#6B66FF</color>
+    <color name="intro_btn_txt">#ffffff</color>
 </resources>
