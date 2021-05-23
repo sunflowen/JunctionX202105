@@ -13,7 +13,6 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.VIBRATE"/>
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,6 +20,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCbWdAyJK7hF19WieWVXPQvkhv9BFswqFA"/>
+
         <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +39,19 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".MapActivity"
+            android:name=".ListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".TalkActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".NavigateActivity"
             android:screenOrientation="portrait"/>
 
     </application>

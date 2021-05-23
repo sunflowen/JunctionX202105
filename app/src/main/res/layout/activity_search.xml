@@ -1,145 +1,572 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/basic_bright">
+    android:background="@color/basic_back"
+    android:orientation="vertical">
 
-    <View
-        android:id="@+id/mapView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="190dp"
-        android:background="@color/basic_bright"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal"
-        android:background="@drawable/map_bottom_back">
+        <ImageView
+            android:layout_width="8.5dp"
+            android:layout_height="17dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="21.5dp"/>
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="21.5dp"
+            android:background="@color/transparent"
+            android:layout_centerVertical="true"
+            android:onClick="BackClicked"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:text="hi, Hyeon Jun"
+            android:text="@string/app_back"
+            android:textColor="@color/basic_bright"
             android:textSize="16dp"
-            android:textStyle="bold"
-            android:textColor="@color/basic_500"/>
-        
-        
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="22dp"
-            android:background="@drawable/map_input_box">
-            
-            <View
-                android:layout_width="4dp"
-                android:layout_height="4dp"
-                android:layout_marginStart="16dp"
-                android:layout_centerVertical="true"
-                android:background="@drawable/yellow_circle"/>
+            android:layout_marginStart="48dp"
+            android:textStyle="bold"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="26dp"
-                android:hint="@string/map_input_hint"
-                android:textColorHint="@color/basic_accent"
-                android:textSize="22dp"
-                android:textColor="@color/basic_accent"
-                android:textStyle="bold"
-                android:background="@color/transparent"/>
-            
-            
-            <ImageView
-                android:src="@drawable/ic_mic_1"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="9dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="12dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white_circle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yeongdeungpo Station"
+            android:textColor="@color/basic_200"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="26dp"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/reserch_gray_box">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/yellow_circle"/>
+
+        <EditText
+            android:id="@+id/where_EditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="26dp"
+            android:hint="@string/map_input_hint"
+            android:textColorHint="@color/basic_accent"
+            android:textSize="22dp"
+            android:textColor="@color/basic_accent"
+            android:textStyle="bold"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:background="@color/transparent"/>
+
+
+        <ImageView
+            android:src="@drawable/ic_mic_1"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp"/>
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:background="@color/transparent"
+            android:onClick="MicClicked"/>
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/my_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="horizontal"
+        android:scrollbarSize="0dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
 
             <Button
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentEnd="true"
-                android:background="@color/transparent"
-                android:onClick="MicClicked"/>
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginStart="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Home"
+                android:textSize="16dp"
+                android:textColor="@color/basic_300"
+                android:background="@drawable/map_location_box"
+                android:onClick="HomeClicked"/>
 
-        </RelativeLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginStart="12dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Hospital"
+                android:textSize="16dp"
+                android:textColor="@color/basic_300"
+                android:background="@drawable/map_location_box"
+                android:onClick="HospitalClicked"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginStart="12dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Company"
+                android:textSize="16dp"
+                android:textColor="@color/basic_300"
+                android:background="@drawable/map_location_box"
+                android:onClick="CompanyClicked"/>
 
-        <HorizontalScrollView
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Hapjeong"
+                android:textSize="16dp"
+                android:textColor="@color/basic_300"
+                android:background="@drawable/map_location_box"
+                android:onClick="HapjeongClicked"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/recent_Layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="21dp"
-            android:scrollbars="horizontal"
-            android:scrollbarSize="0dp">
+            android:layout_height="40dp"
+            android:text="Recent"
+            android:textColor="@color/basic_100"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/textlines"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="42dp"
-                    android:layout_marginStart="16dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="Home"
-                    android:textSize="16dp"
-                    android:textColor="@color/basic_300"
-                    android:background="@drawable/map_location_box"
-                    android:onClick="HomeClicked"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginBottom="14dp">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="42dp"
-                    android:layout_marginStart="12dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="Hospital"
-                    android:textSize="16dp"
-                    android:textColor="@color/basic_300"
-                    android:background="@drawable/map_location_box"
-                    android:onClick="HospitalClicked"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mapo-gu Office Station Line 6"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_400"
+                        android:textSize="18dp" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="42dp"
-                    android:layout_marginStart="12dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="Company"
-                    android:textSize="16dp"
-                    android:textColor="@color/basic_300"
-                    android:background="@drawable/map_location_box"
-                    android:onClick="CompanyClicked"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="206-1 Seongsan-dong, Mapo-gu, Seoul"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/basic_400"
+                        android:textSize="16dp" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="42dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginEnd="16dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="Mangwon"
-                    android:textSize="16dp"
-                    android:textColor="@color/basic_300"
-                    android:background="@drawable/map_location_box"
-                    android:onClick="MangwonClicked"/>
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/ic_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:onClick="HomeClicked"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginBottom="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="449-1 Gayang-dong, Gangseo-gu..."
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_400"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="206-1 Seongsan-dong, Mapo-gu, Seoul"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/basic_400"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/ic_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:onClick="HospitalClicked"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginBottom="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="KB Kookmin Bank Shinnae-dong"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_400"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="206-1 Seongsan-dong, Mapo-gu, Seoul"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/basic_400"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/ic_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:onClick="CompanyClicked"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginBottom="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hapjeong Station Line 2"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_400"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="206-1 Seongsan-dong, Mapo-gu, Seoul"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/basic_400"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/ic_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:onClick="HapjeongClicked"/>
+
+                </RelativeLayout>
 
             </LinearLayout>
 
-        </HorizontalScrollView>
+        </ScrollView>
 
     </LinearLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/result_Layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Search Results"
+            android:textColor="@color/basic_100"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/textlines"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginBottom="14dp">
+
+                    <TextView
+                        android:layout_width="280dp"
+                        android:layout_height="66dp"
+                        android:text="Gangnam Station Shinbundang Line"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"
+                        android:textSize="22dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="B 396 Gangnam-daero Gangnam-gu seoul"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/basic_500"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_go"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="9dp"
+
+                        />
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="9dp"
+                        android:background="@color/transparent"
+                        android:onClick="GoClicked"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginBottom="14dp">
+
+                    <TextView
+                        android:layout_width="280dp"
+                        android:layout_height="66dp"
+                        android:text="Gangnam Station Shinbundang Line"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"
+                        android:textSize="22dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="B 396 Gangnam-daero Gangnam-gu seoul"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/basic_500"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_go"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="9dp"
+
+                        />
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="9dp"
+                        android:background="@color/transparent"
+                        android:onClick="GoClicked"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginBottom="14dp">
+
+                    <TextView
+                        android:layout_width="280dp"
+                        android:layout_height="66dp"
+                        android:text="Gangnam Station Shinbundang Line"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"
+                        android:textSize="22dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="B 396 Gangnam-daero Gangnam-gu seoul"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/basic_500"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_go"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="9dp"
+
+                        />
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="9dp"
+                        android:background="@color/transparent"
+                        android:onClick="GoClicked"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="3dp"
+                    android:layout_marginBottom="14dp">
+
+                    <TextView
+                        android:layout_width="280dp"
+                        android:layout_height="66dp"
+                        android:text="Gangnam Station Shinbundang Line"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"
+                        android:textSize="22dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="B 396 Gangnam-daero Gangnam-gu seoul"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/basic_500"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_go"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="9dp"
+
+                        />
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="9dp"
+                        android:background="@color/transparent"
+                        android:onClick="GoClicked"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+

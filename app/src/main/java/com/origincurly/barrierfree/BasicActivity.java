@@ -447,7 +447,11 @@ public class BasicActivity extends AppCompatActivity implements GlobalValue {
     }
     public static void hideSoftKeyboard(Activity activity) { // hide keyboard
         InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
+        try {
+            inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
+        } catch (Exception e) {
+            Log.d(TAG, "no soft input");
+        }
     }
     public void clearFocusBundle() {
 

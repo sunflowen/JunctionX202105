@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_back">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/basic_back"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/start_info_box">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/start_destination"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/basic_600"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="114dp"
+                android:text="Gangnam st."
+                android:textSize="26dp"
+                android:textStyle="bold"
+                android:textColor="@color/basic_bright"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/start_info_box"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="11:28"
+                    android:textSize="28dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_200"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/start_arrival"
+                    android:textSize="16dp"
+                    android:textColor="@color/basic_500"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/min_Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="65"
+                    android:textSize="28dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_200"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_min"
+                    android:textSize="16dp"
+                    android:textColor="@color/basic_500"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/km_Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="1.6"
+                    android:textSize="28dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_200"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_km"
+                    android:textSize="16dp"
+                    android:textColor="@color/basic_500"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:id="@+id/b1_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/start_info_box"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/start_bus_stop"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="114dp"
+                    android:text="Hapjeong st."
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_bright"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="54dp">
+                    <TextView
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/start_bus_info"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_600"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5071"
+                        android:textSize="26dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_bright"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Green bus"
+                        android:layout_marginStart="8dp"
+                        android:textSize="26dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_green"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/b2_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/start_info_box"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Arrived"
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="54dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Hapjeong station"
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_600"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/b3_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/start_info_box"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginStart="16dp"
+                    android:text="There's a bus on the"
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="54dp"
+                    android:layout_marginStart="16dp"
+                    android:text=" left, walk 5m."
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/b4_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/start_info_box"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Where to"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="114dp"
+                    android:text="Sinnonhyeon"
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_bright"/>
+                <TextView
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="34dp"
+                    android:text="get off"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="54dp"
+                    android:layout_marginStart="114dp"
+                    android:text="BSX Building"
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_bright"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/b5_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/start_info_box"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="2nd"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="75dp"
+                    android:text="Walkway"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_600"/>
+
+                <TextView
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginTop="34dp"
+                    android:text="116m"
+                    android:textSize="66dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_600"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="334dp">
+
+            <RelativeLayout
+                android:id="@+id/c1_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_direction_xl"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="163dp"
+                    android:text="371m"
+                    android:gravity="center_horizontal"
+                    android:textSize="64dp"
+                    android:lineHeight="96dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="241dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:text="to your"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_500"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="7dp"
+                        android:text="Right"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/c2_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_points"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="163dp"
+                    android:text="5071"
+                    android:gravity="center_horizontal"
+                    android:textSize="64dp"
+                    android:lineHeight="96dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="241dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="7dp"
+                        android:text="waiting for bus"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/c3_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_points"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="163dp"
+                    android:text="5071"
+                    android:gravity="center_horizontal"
+                    android:textSize="64dp"
+                    android:lineHeight="96dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="241dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="7dp"
+                        android:text="Please wait here"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/c4_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_bus"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="163dp"
+                    android:text="5071"
+                    android:gravity="center_horizontal"
+                    android:textSize="64dp"
+                    android:lineHeight="96dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="241dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="7dp"
+                        android:text="The bus has arrived"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/c5_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_bus"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="163dp"
+                    android:text="5071"
+                    android:gravity="center_horizontal"
+                    android:textSize="64dp"
+                    android:lineHeight="96dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="241dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:text="2nd"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="7dp"
+                        android:text="from the front"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_500"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/c6_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_direction_left"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="163dp"
+                    android:text="5m"
+                    android:gravity="center_horizontal"
+                    android:textSize="64dp"
+                    android:lineHeight="96dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="241dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:text="to your"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_500"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="7dp"
+                        android:text="Left"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/c7_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_direction_go"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="163dp"
+                    android:text="0.2m"
+                    android:gravity="center_horizontal"
+                    android:textSize="64dp"
+                    android:lineHeight="96dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="241dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="7dp"
+                        android:text="Take the bus"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/c8_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_points"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="163dp"
+                    android:text="3 Stops"
+                    android:gravity="center_horizontal"
+                    android:textSize="64dp"
+                    android:lineHeight="96dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_600"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="241dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:text="Left"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_600"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/c9_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_alarm_off"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="163dp"
+                    android:text="2 stops"
+                    android:gravity="center_horizontal"
+                    android:textSize="64dp"
+                    android:lineHeight="96dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_200"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="241dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:text="Left"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_200"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/c10_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_alarm_on"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="163dp"
+                    android:text="Next stops"
+                    android:gravity="center_horizontal"
+                    android:textSize="64dp"
+                    android:lineHeight="96dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="241dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:text="Get ready to get off"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/c11_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/ic_direction_xl"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="163dp"
+                    android:text="262m"
+                    android:gravity="center_horizontal"
+                    android:textSize="64dp"
+                    android:lineHeight="96dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="241dp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:text="to your"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_500"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="7dp"
+                        android:text="Right"
+                        android:textSize="28dp"
+                        android:lineHeight="42dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/basic_accent"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="78dp"
+                    android:layout_height="78dp">
+                    <Button
+                        android:layout_width="78dp"
+                        android:layout_height="78dp"
+                        android:paddingStart="16dp"
+                        android:background="@drawable/yellow_transparent_circle"
+                        android:onClick="ListClicked"/>
+                    <ImageView
+                        android:src="@drawable/ic_list_1"
+                        android:layout_width="39dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="25dp"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/start_list"
+                    android:gravity="center_horizontal"
+                    android:textSize="18dp"
+                    android:lineHeight="27dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_bright"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="78dp"
+                    android:layout_height="78dp">
+                    <Button
+                        android:layout_width="78dp"
+                        android:layout_height="78dp"
+                        android:paddingStart="16dp"
+                        android:background="@drawable/yellow_transparent_circle"
+                        android:onClick="OverviewClicked"/>
+                    <ImageView
+                        android:src="@drawable/ic_overview"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/start_overview"
+                    android:gravity="center_horizontal"
+                    android:textSize="18dp"
+                    android:lineHeight="27dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_bright"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="78dp"
+                    android:layout_height="78dp">
+                    <Button
+                        android:layout_width="78dp"
+                        android:layout_height="78dp"
+                        android:paddingStart="16dp"
+                        android:background="@drawable/red_transparent_circle"
+                        android:onClick="EndClicked"/>
+                    <ImageView
+                        android:src="@drawable/ic_end"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/start_end"
+                    android:gravity="center_horizontal"
+                    android:textSize="18dp"
+                    android:lineHeight="27dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_bright"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

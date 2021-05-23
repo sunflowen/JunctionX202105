@@ -19,7 +19,6 @@ public class SampleActivity extends BasicActivity {
 
 //        initSTT();
     }
-x
     public void BtnClicked(View v) {
     }
 

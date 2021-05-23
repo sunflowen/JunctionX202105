@@ -8,15 +8,17 @@
     <string name="msg_server_error">Bad connection to the server.</string>
     <string name="msg_permission_need">You must grant all permissions before you can use the service.</string>
 
+    <string name="permission_title">Permission Need</string>
     <string name="permission_re">Permission Regrant</string>
 
-    <string name="app_exit">App Exit</string>
+    <string name="app_exit">Exit</string>
 
 
     <!--map-->
     <string name="map_input_hint">Where to?</string>
 
     <!--tts-->
+    <string name="tts_need">Please talk your destination</string>
     <string name="tts_destination">Tell me your\ndestination</string>
     <string name="tts_listening">I\'m listening</string>
 

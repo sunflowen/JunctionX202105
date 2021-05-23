@@ -7,7 +7,17 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class MapActivity extends BasicActivity {
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class MapActivity extends BasicActivity  implements OnMapReadyCallback {
+
+    private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,39 +25,36 @@ public class MapActivity extends BasicActivity {
         setContentView(R.layout.activity_map);
         setActivity(this, this);
 
-        initSTT();
-        initTTS();
-    }
-
-    public void TalkClicked(View v) {
-        if (isTalkDuring) {
-            stopTalk();
-
-        } else {
-            startTalk();
-            talkOutput_Txt.setText("");
-        }
-    }
-
-    public void SpeechClicked(View v) {
-        if (isSpeechDuring) {
-            stopSpeechRepeat();
-
-        } else {
-            String msg = speechInput_EditTxt.getText().toString();
-            if (msg.length() > 0) {
-                startSpeechRepeat(msg, 3);
-            } else {
-                startSpeechRepeat("메세지를 입력해주세요.", 1);
-            }
-        }
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.mapView);
+        mapFragment.getMapAsync(this);
     }
 
     @Override
-    public void sstResult(String msg) {
-        talkOutput_Txt.setText(talkOutput_Txt.getText()+"\r\n"+msg);
+    public void onMapReady(final GoogleMap googleMap) {
+        mMap = googleMap;
+
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        oneMarker();
     }
 
+    public void oneMarker() {
+        LatLng seoul = new LatLng(37.51554, 126.90705);
+
+        MarkerOptions makerOptions = new MarkerOptions();
+        makerOptions
+                .position(seoul)
+//                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+                .alpha(0.5f);
+
+        mMap.addMarker(makerOptions);
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(seoul, 16));
+    }
+
+    public void SearchClicked(View v) {
+        startActivityClass(SearchActivity.class, R.anim.animation_bottom_open, R.anim.animation_stop_short);
+    }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -55,11 +62,5 @@ public class MapActivity extends BasicActivity {
         }
 
         return true;
-    }
-
-    @Override
-    public void clearFocusBundle() {
-        super.clearFocusBundle();
-        speechInput_EditTxt.clearFocus();
     }
 }
