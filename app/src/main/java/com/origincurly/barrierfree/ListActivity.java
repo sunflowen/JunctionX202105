@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class tmpActivity extends BasicActivity {
+public class ListActivity extends BasicActivity {
 
 
     private TextView talkOutput_Txt;

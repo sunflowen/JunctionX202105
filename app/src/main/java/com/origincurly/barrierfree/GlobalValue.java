@@ -31,13 +31,15 @@ public interface GlobalValue {
     //time
     int SPEECH_REPEAT_MAX = 3;
     int SPEECH_REPEAT_INTERVAL_TIME = 5000;
+    int ANIM_INTERVAL_TIME = 5000;
 
+    int ANIM_DELAY_TIME = 300;
     int INTRO_DELAY_TIME = 1500;
     int BACK_KEY_DELAY_TIME = 2000;
 
     //RequestCode
     int PERMISSION_REQUEST = 100;
-    int FRAME_ACTIVITY = 200;
+    int TALK_ACTIVITY = 200;
     int DETAIL_ACTIVITY = 300;
 
 }

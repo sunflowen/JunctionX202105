@@ -5,7 +5,11 @@
     <alpha
         android:fromAlpha="0.0"
         android:toAlpha="1.0"
-        android:interpolator="@android:anim/accelerate_interpolator"
         android:duration="@android:integer/config_shortAnimTime"/>
 
+    <translate
+        android:duration="@android:integer/config_shortAnimTime"
+        android:fromYDelta="75%"
+        android:toYDelta="0%"
+        android:interpolator="@android:anim/decelerate_interpolator"/>
 </set>

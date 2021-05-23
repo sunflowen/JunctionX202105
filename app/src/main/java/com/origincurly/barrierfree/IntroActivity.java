@@ -1,6 +1,7 @@
 package com.origincurly.barrierfree;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -99,9 +101,25 @@ public class IntroActivity extends BasicActivity {
         if (isGranted) {
             startActivityClass(MapActivity.class);
         } else {
-            denied_Layout.setVisibility(View.VISIBLE);
-            showToastMessage(R.string.msg_permission_need);
+//            denied_Layout.setVisibility(View.VISIBLE);
+//            showToastMessage(R.string.msg_permission_need);
+            showConfirmDialog();
         }
+    }
+
+    private void showConfirmDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.permission_title)
+                .setMessage(R.string.msg_permission_need)
+                .setPositiveButton(R.string.permission_re, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        checkPermission();
+                    }})
+                .setNegativeButton(R.string.app_exit, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        killApp();
+                    }})
+                .show();
     }
 
     @Override
