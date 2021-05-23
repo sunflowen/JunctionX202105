@@ -19,4 +19,18 @@
     <string name="tts_destination">Tell me your<br/>destination</string>
     <string name="tts_listening">I'm listening</string>
 
+    <!--start-->
+    <string name="start_destination">Destination</string>
+    <string name="start_arrival">arrival</string>
+    <string name="start_min">min</string>
+    <string name="start_km">km</string>
+    <string name="start_bus_stop">Bus stop</string>
+    <string name="start_bus_info">Bus info</string>
+    <string name="start_walkway">Walkway</string>
+    <string name="start_list">List</string>
+    <string name="start_overview">Overview</string>
+    <string name="start_end">End</string>
+
+
+
 </resources>
