@@ -33,5 +33,6 @@
     <string name="start_list">목록</string>
     <string name="start_overview">전체 경로 보기</string>
     <string name="start_end">끝내기</string>
+    <string name="start_navigate">길안내</string>
 
 </resources>
