@@ -20,4 +20,16 @@
     <string name="tts_destination">당신의 도착지를\n알려주세요</string>
     <string name="tts_listening">듣고 있습니다</string>
 
+    <!--start-->
+    <string name="start_destination">도착</string>
+    <string name="start_arrival">도착 시간</string>
+    <string name="start_min">min</string>
+    <string name="start_km">km</string>
+    <string name="start_bus_stop">버스 정류장</string>
+    <string name="start_bus_info">버스 정보</string>
+    <string name="start_walkway">보도</string>
+    <string name="start_list">목록</string>
+    <string name="start_overview">전체 경로 보기</string>
+    <string name="start_end">끝내기</string>
+
 </resources>
