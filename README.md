@@ -1,5 +1,7 @@
 # JunctionXSeoul2021
-# Buppy Service
+
+![무제-1](https://user-images.githubusercontent.com/45136689/119251459-9c584b80-bbe1-11eb-8de7-5acaf14f5918.png)
+
 
 
 1) Background  
