@@ -14,5 +14,6 @@
 
     <!--map-->
     <string name="map_input_hint">어디가?</string>
+    <string name="destination_arrived">도착</string>
 
 </resources>

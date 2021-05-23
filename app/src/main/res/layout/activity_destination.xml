@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_back"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_check"
+        android:layout_marginTop="140dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="64dp"
+        android:textColor="@color/basic_bright"
+        android:text="@string/destination_arrived"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineHeight="42dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="28dp"
+        android:textColor="@color/basic_600"
+        android:text="Destination is about "
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+    >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:lineHeight="42dp"
+            android:text="3m"
+            android:textColor="@color/basic_bright"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineHeight="42dp"
+
+            android:layout_marginStart="15dp"
+            android:textSize="28dp"
+            android:textColor="@color/basic_600"
+            android:text="to your"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineHeight="42dp"
+            android:layout_marginStart="15dp"
+            android:textSize="28dp"
+            android:textColor="@color/basic_bright"
+            android:text="left"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp">
+
+            <RelativeLayout
+                android:layout_width="156dp"
+                android:layout_height="70dp"
+                android:background="@drawable/destination_search_box"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Search"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_accent"
+                    android:textSize="26dp"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="SearchClicked" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="156dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/destination_end_box"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_eight"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="End"
+                    android:textStyle="bold"
+                    android:textColor="@color/basic_back"
+                    android:textSize="26dp"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="SearchClicked" />
+
+            </RelativeLayout>
+        </LinearLayout>
+</RelativeLayout>

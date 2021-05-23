@@ -14,4 +14,7 @@
 
     <!--map-->
     <string name="map_input_hint">Where to?</string>
+
+    <string name="destination_arrived">Arrived</string>
+
 </resources>
