@@ -104,6 +104,13 @@ public class NavigateActivity extends BasicActivity {
         }
     };
 
+    Handler a7Handler = new Handler() {
+        public void handleMessage(Message msg) {
+            sstResult("Gangnam");
+            a8Handler.sendEmptyMessageDelayed(0, ANIM_INTERVAL_TIME);
+        }
+    };
+
     Handler a8Handler = new Handler() {
         public void handleMessage(Message msg) {
             sstResult("Gangnam");
@@ -130,21 +137,6 @@ public class NavigateActivity extends BasicActivity {
             sstResult("Gangnam");
         }
     };
-
-    Handler a1Handler = new Handler() {
-        public void handleMessage(Message msg) {
-            sstResult("Gangnam");
-            a2Handler.sendEmptyMessageDelayed(0, ANIM_INTERVAL_TIME);
-        }
-    };
-
-    Handler a1Handler = new Handler() {
-        public void handleMessage(Message msg) {
-            sstResult("Gangnam");
-            a2Handler.sendEmptyMessageDelayed(0, ANIM_INTERVAL_TIME);
-        }
-    };
-
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

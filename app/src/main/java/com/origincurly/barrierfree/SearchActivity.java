@@ -119,7 +119,7 @@ public class SearchActivity extends BasicActivity {
         showResult();
     }
 
-    public void HapjeongClicked(View v) {
+    public void GangseoClicked(View v) {
         where_EditTxt.setText("Mapo-gu Office Station Line 6");
         showResult();
     }

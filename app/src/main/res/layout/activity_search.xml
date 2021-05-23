@@ -165,11 +165,11 @@
                 android:layout_marginEnd="16dp"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:text="Hapjeong"
+                android:text="Gangseo"
                 android:textSize="16dp"
                 android:textColor="@color/basic_300"
                 android:background="@drawable/map_location_box"
-                android:onClick="HapjeongClicked"/>
+                android:onClick="GangseoClicked"/>
 
         </LinearLayout>
 
@@ -254,7 +254,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="449-1 Gayang-dong, Gangseo-gu..."
+                        android:text="Gangseo-gu Office Annex"
                         android:textStyle="bold"
                         android:textColor="@color/basic_400"
                         android:textSize="18dp" />
@@ -262,7 +262,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="206-1 Seongsan-dong, Mapo-gu, Seoul"
+                        android:text="38, Yangcheon-ro 59-gil, Gangseo-gu..."
                         android:layout_alignParentBottom="true"
                         android:textColor="@color/basic_400"
                         android:textSize="16dp" />
@@ -278,7 +278,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/transparent"
-                        android:onClick="HospitalClicked"/>
+                        android:onClick="GangseoClicked"/>
 
                 </RelativeLayout>
 
@@ -330,7 +330,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Hapjeong Station Line 2"
+                        android:text="Gayang-dong, Gangseo-gu Hospital"
                         android:textStyle="bold"
                         android:textColor="@color/basic_400"
                         android:textSize="18dp" />
@@ -338,7 +338,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="206-1 Seongsan-dong, Mapo-gu, Seoul"
+                        android:text="302 Gayang-dong, Gangseo-gu, Seoul"
                         android:layout_alignParentBottom="true"
                         android:textColor="@color/basic_400"
                         android:textSize="16dp" />
@@ -354,7 +354,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/transparent"
-                        android:onClick="HapjeongClicked"/>
+                        android:onClick="HospitalClicked"/>
 
                 </RelativeLayout>
 

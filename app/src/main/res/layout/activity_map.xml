@@ -151,12 +151,12 @@
                             android:paddingStart="16dp"
                             android:paddingEnd="16dp"
                             android:gravity="center"
-                            android:text="Hapjeong"
+                            android:text="Gangseo"
                             android:textSize="16dp"
                             android:textColor="@color/basic_300"
                             android:textAllCaps="true"
                             android:background="@drawable/map_location_box"
-                            android:onClick="HapjeongClicked"/>
+                            android:onClick="GangseoClicked"/>
 
                     </LinearLayout>
 
