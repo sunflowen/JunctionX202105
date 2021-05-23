@@ -175,6 +175,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="9dp"
                     android:background="@color/transparent"
+                    android:onClick="GoClicked"
                     />
             </RelativeLayout>
         </LinearLayout>
