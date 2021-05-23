@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_bright">
+
+    <View
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="190dp"
+        android:background="@color/basic_bright"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:background="@drawable/map_bottom_back">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="hi, Hyeon Jun"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/basic_500"/>
+        
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/map_input_box">
+            
+            <View
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/yellow_circle"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="26dp"
+                android:hint="@string/map_input_hint"
+                android:textColorHint="@color/basic_accent"
+                android:textSize="22dp"
+                android:textColor="@color/basic_accent"
+                android:textStyle="bold"
+                android:background="@color/transparent"/>
+            
+            
+            <ImageView
+                android:src="@drawable/ic_mic_1"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="9dp"/>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:background="@color/transparent"
+                android:onClick="MicClicked"/>
+
+        </RelativeLayout>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="21dp"
+            android:scrollbars="horizontal"
+            android:scrollbarSize="0dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="16dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="Home"
+                    android:textSize="16dp"
+                    android:textColor="@color/basic_300"
+                    android:background="@drawable/map_location_box"
+                    android:onClick="HomeClicked"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="12dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="Hospital"
+                    android:textSize="16dp"
+                    android:textColor="@color/basic_300"
+                    android:background="@drawable/map_location_box"
+                    android:onClick="HospitalClicked"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="12dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="Company"
+                    android:textSize="16dp"
+                    android:textColor="@color/basic_300"
+                    android:background="@drawable/map_location_box"
+                    android:onClick="CompanyClicked"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="Mangwon"
+                    android:textSize="16dp"
+                    android:textColor="@color/basic_300"
+                    android:background="@drawable/map_location_box"
+                    android:onClick="MangwonClicked"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

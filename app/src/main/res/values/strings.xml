@@ -16,7 +16,7 @@
     <string name="map_input_hint">Where to?</string>
 
     <!--tts-->
-    <string name="tts_destination">Tell me your<br/>destination</string>
-    <string name="tts_listening">I'm listening</string>
+    <string name="tts_destination">Tell me your\ndestination</string>
+    <string name="tts_listening">I\'m listening</string>
 
 </resources>

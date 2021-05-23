@@ -16,7 +16,7 @@
     <string name="map_input_hint">어디가?</string>
 
     <!--tts-->
-    <string name="tts_destination">당신의 도착지를<br/>알려주세요</string>
+    <string name="tts_destination">당신의 도착지를\n알려주세요</string>
     <string name="tts_listening">듣고 있습니다</string>
 
 </resources>
